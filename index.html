@@ -11,9 +11,94 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <h1>Hello</h1>
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+      <div class="container-xxl">
+        <a href="#introduction" class="navbar-brand">
+          <span class="fw-bold text-secondary"> Kyle Khai Tran </span>
+        </a>
+
+        <!--HAMBURGER FOR MOBILE NAV-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="main-nav"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--NAVBAR LINKS-->
+        <div
+          class="collapse navbar-collapse justify-content-end allign-center"
+          id="main-nav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item ms-2 d-none d-md-inline">
+              <a class="btn btn-outline-secondary" href="#contact"
+                >Contact Me</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- TITLE HEADER -->
+
+    <div class="container-slide">
+      <div class="slides introduction" id="introduction">
+        <div class="container-fluid my-5">
+          <h1 class="fw-bold text-center">Hello! Welcome To My Website :D</h1>
+          <button class="btn btn-outline-secondary btn-lg text">Button</button>
+        </div>
+      </div>
+      <div class="slides" id="about">
+        <h2>About me</h2>
+      </div>
+      <div class="slides" id="skills">
+        <h2>Skills</h2>
+      </div>
+      <div class="slides" id="projects">
+        <h2>Projects</h2>
+      </div>
+      <h2 class="text-center">Contact Me</h2>
+      <div class="slides" id="contact">
+        <div class="container">
+          <h2>Send me a message!</h2>
+          <div class="form-row">
+            <div class="form-group col-md-6 mt-3">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" />
+            </div>
+            <div class="form-group col-md-6 mt-3">
+              <label for="subject">Subject</label>
+              <input type="text" class="form-control" id="subject" />
+            </div>
+            <div class="form-group col-md-6 mt-3">
+              <label for="inputEmail">Email</label>
+              <input type="email" class="form-control" id="inputEmail" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--IMPORT JS FROM BOOTSTRAP-->
     <script
@@ -21,5 +106,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script src="assets/app.js" defer></script>
   </body>
 </html>
