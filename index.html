@@ -11,16 +11,35 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <!--IMPORT ICONS BOOTSTRAP-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
 
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
     <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
       <div class="container-xxl">
         <a href="#introduction" class="navbar-brand">
-          <span class="fw-bold text-secondary"> Kyle Khai Tran </span>
+          <span class="fw-bold text-secondary">
+            <i class="bi bi-star-fill px-2"></i>Kyle Khai Tran
+          </span>
         </a>
+        <!--THEME SWITCH-->
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input visually-hidden"
+            type="checkbox"
+            id="modeSwitch"
+          />
+          <label class="form-check-label" for="modeSwitch">
+            <span id="modeIcon" class="bi bi-sun-fill"></span>
+            <span id="modeText">Light</span>
+          </label>
+        </div>
 
         <!--HAMBURGER FOR MOBILE NAV-->
         <button
@@ -63,23 +82,326 @@
     <!-- TITLE HEADER -->
 
     <div class="container-slide">
-      <div class="slides introduction" id="introduction">
+      <div class="slides intro" id="introduction">
         <div class="container-fluid my-5">
-          <h1 class="fw-bold text-center">Hello! Welcome To My Website :D</h1>
+          <h1 class="fw-bold text-center">Hi! Welcome To My Website :D</h1>
           <button class="btn btn-outline-secondary btn-lg text">Button</button>
         </div>
       </div>
+
+      <!-- ABOUT ME SECTION -->
       <div class="slides" id="about">
-        <h2>About me</h2>
+        <h2 class="text-center">
+          <i class="bi bi-person-circle px-2"></i>
+          About me
+        </h2>
       </div>
+
+      <!-- SKILLS SECTION -->
       <div class="slides" id="skills">
-        <h2>Skills</h2>
+        <div class="text-center">
+          <h2><i class="bi bi-check-all px-2"></i>Skills</h2>
+          <p class="lead text-muted">What I know!</p>
+        </div>
+
+        <div class="accordion" id="skillsets">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#languages-section"
+                aria-expanded="false"
+                aria-controls="languages-section"
+              >
+                Programming Languages
+              </button>
+            </h2>
+            <div
+              id="languages-section"
+              class="accordion-collapse collapse"
+              aria-labelledby="heading-1"
+              data-bs-parent="#skillsets"
+            >
+              <div class="accordion-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque deleniti fugiat quaerat, ipsum aperiam placeat
+                  distinctio quasi nulla ducimus voluptas nobis. Quam, placeat
+                  laudantium. Labore provident consequatur nesciunt doloribus
+                  eligendi.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#frameworks-section"
+                  aria-expanded="false"
+                  aria-controls="frameworks-section"
+                >
+                  Frameworks
+                </button>
+              </h2>
+              <div
+                id="frameworks-section"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading-2"
+                data-bs-parent="#skillsets"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Itaque deleniti fugiat quaerat, ipsum aperiam placeat
+                    distinctio quasi nulla ducimus voluptas nobis. Quam, placeat
+                    laudantium. Labore provident consequatur nesciunt doloribus
+                    eligendi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#devtools-section"
+                aria-expanded="false"
+                aria-controls="devtools-section"
+              >
+                Developer Tools
+              </button>
+            </h2>
+            <div
+              id="devtools-section"
+              class="accordion-collapse collapse"
+              aria-labelledby="heading-3"
+              data-bs-parent="#skillsets"
+            >
+              <div class="accordion-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque deleniti fugiat quaerat, ipsum aperiam placeat
+                  distinctio quasi nulla ducimus voluptas nobis. Quam, placeat
+                  laudantium. Labore provident consequatur nesciunt doloribus
+                  eligendi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-4">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#other-section"
+                aria-expanded="false"
+                aria-controls="other-section"
+              >
+                Other Skills
+              </button>
+            </h2>
+            <div
+              id="other-section"
+              class="accordion-collapse collapse"
+              aria-labelledby="heading-4"
+              data-bs-parent="#skillsets"
+            >
+              <div class="accordion-body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque deleniti fugiat quaerat, ipsum aperiam placeat
+                  distinctio quasi nulla ducimus voluptas nobis. Quam, placeat
+                  laudantium. Labore provident consequatur nesciunt doloribus
+                  eligendi. (french delf)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!--PROJECT SECTION-->
       <div class="slides" id="projects">
-        <h2>Projects</h2>
+        <section id="pcards" class="bg-light mt-5">
+          <div class="container-lg">
+            <div class="text-center">
+              <h2>
+                <i class="bi bi-folder px-2"></i>
+                Projects
+              </h2>
+              <p class="lead text-muted">Here are some of my projects!</p>
+            </div>
+
+            <div class="row my-5 align-items-center justify-content-center">
+              <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card border-primary border-2">
+                  <div class="card-header text-center text-primary">
+                    In Development
+                  </div>
+                  <div class="card-body text-center py-5">
+                    <h4 class="card-title">MERN STACK PROJECT</h4>
+                    <p class="lead card-subtitile">...working on it</p>
+                    <p class="display-5 my-4 text-primary fw-bold">12.99</p>
+                    <p class="card-text mx-5 text-muted d-none d-lg-block">
+                      <strong>PROJECT DETAILS HERE + IMAGE</strong>
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Maxime, accusamus. Fugiat, nostrum! Eius laboriosam quos
+                      et hic aliquid, accusamus quod nulla voluptate adipisci,
+                      aperiam voluptatum quas blanditiis ipsa. Laboriosam,
+                      tenetur.
+                    </p>
+
+                    <a
+                      href="https://github.com/KYLEKHAI/kiyokhai-beats-player"
+                      class="btn btn-outline-primary btn-lg mt-3"
+                    >
+                      <img
+                        src="/images/github_icon.png"
+                        alt="GitHub Icon"
+                        width="30"
+                        height="30"
+                      />
+
+                      Source Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card border-0">
+                  <div class="card-body text-center py-4">
+                    <h4 class="card-title">CalTracker+</h4>
+                    <p class="lead card-subtitile">A Calorie App Tracker</p>
+                    <p class="display-5 my-4 text-primary fw-bold">12.99</p>
+                    <p class="card-text mx-5 text-muted d-none d-lg-block">
+                      <strong>PROJECT DETAILS HERE + IMAGE</strong>
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Maxime, accusamus. Fugiat, nostrum! Eius laboriosam quos
+                      et hic aliquid, accusamus quod nulla voluptate adipisci,
+                      aperiam voluptatum quas blanditiis ipsa. Laboriosam,
+                      tenetur.
+                    </p>
+                    <a
+                      href="https://kylekhai-beats-gallery.netlify.app/"
+                      class="btn btn-outline-primary btn-lg mt-3"
+                      >Deployed Link</a
+                    >
+                    <a
+                      href="https://github.com/KYLEKHAI/kiyokhai-beats-player"
+                      class="btn btn-outline-primary btn-lg mt-3"
+                    >
+                      <img
+                        src="/images/github_icon.png"
+                        alt="GitHub Icon"
+                        width="30"
+                        height="30"
+                      />
+
+                      Source Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card border-0">
+                  <div class="card-body text-center py-4">
+                    <h4 class="card-title">DocAppoint</h4>
+                    <p class="lead card-subtitile">A mobile healthcare app</p>
+                    <p class="display-5 my-4 text-primary fw-bold">12.99</p>
+                    <p class="card-text mx-5 text-muted d-none d-lg-block">
+                      <strong>PROJECT DETAILS HERE + IMAGE</strong>
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Maxime, accusamus. Fugiat, nostrum! Eius laboriosam quos
+                      et hic aliquid, accusamus quod nulla voluptate adipisci,
+                      aperiam voluptatum quas blanditiis ipsa. Laboriosam,
+                      tenetur.
+                    </p>
+                    <a
+                      href="https://kylekhai-beats-gallery.netlify.app/"
+                      class="btn btn-outline-primary btn-lg mt-3"
+                      >Deployed Link</a
+                    >
+                    <a
+                      href="https://github.com/KYLEKHAI/kiyokhai-beats-player"
+                      class="btn btn-outline-primary btn-lg mt-3"
+                    >
+                      <img
+                        src="/images/github_icon.png"
+                        alt="GitHub Icon"
+                        width="30"
+                        height="30"
+                      />
+
+                      Source Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card border-0">
+                  <div class="card-body text-center py-4">
+                    <h4 class="card-title">Music-Video Player</h4>
+                    <p class="lead card-subtitile">
+                      A Video Player for instrumentals
+                    </p>
+                    <p class="display-5 my-4 text-primary fw-bold">12.99</p>
+                    <p class="card-text mx-5 text-muted d-none d-lg-block">
+                      <strong>PROJECT DETAILS HERE + IMAGE</strong>
+                      <br />
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Maxime, accusamus. Fugiat, nostrum! Eius laboriosam quos
+                      et hic aliquid, accusamus quod nulla voluptate adipisci,
+                      aperiam voluptatum quas blanditiis ipsa. Laboriosam,
+                      tenetur.
+                    </p>
+                    <a
+                      href="https://kylekhai-beats-gallery.netlify.app/"
+                      class="btn btn-outline-primary btn-lg mt-3"
+                      >Deployed Link</a
+                    >
+                    <a
+                      href="https://github.com/KYLEKHAI/kiyokhai-beats-player"
+                      class="btn btn-outline-primary btn-lg mt-3"
+                    >
+                      <img
+                        src="/images/github_icon.png"
+                        alt="GitHub Icon"
+                        width="30"
+                        height="30"
+                      />
+
+                      Source Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <h2 class="text-center">Contact Me</h2>
-      <div class="slides" id="contact">
+
+      <!--CONTACT ME SECTION-->
+
+      <div class="slides mt-5" id="contact">
+        <h2 class="text-center">
+          <i class="bi bi-envelope px-2"></i>
+          Contact Me
+        </h2>
         <div class="container">
           <h2>Send me a message!</h2>
           <div class="form-row">

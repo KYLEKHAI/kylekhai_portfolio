@@ -6,13 +6,19 @@
 .slides {
   width: 100%;
   height: 100vh;
+  padding-top: 60px;
+  /*
   display: flex;
   align-items: center;
   justify-content: center;
+  */
   gap: 50px;
 }
 
-.introduction {
+.intro {
   height: 50vh;
-  margin-top: 0px;
+  margin-top: 50px;
+}
+
+#contact {
 }
