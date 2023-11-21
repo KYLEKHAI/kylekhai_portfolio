@@ -22,3 +22,21 @@
 
 #contact {
 }
+
+.accordion-button {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skill-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 30px;
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 150px;
+  margin-bottom: 10px;
+}
