@@ -1,3 +1,5 @@
+/* HIGH LEVEL // GENERAL SECTION */
+
 .container-slide {
   width: 100%;
   height: 100vh;
@@ -15,17 +17,154 @@
   gap: 50px;
 }
 
-.intro {
-  height: 50vh;
-  margin-top: 50px;
+/* NAVBAR SECTION */
+.header {
+  transition: all 0.4s ease;
 }
 
-#contact {
+.header-scrolled {
+  background-color: #d5d0d0;
 }
+
+.header-scrolled.dark-mode {
+  background-color: #3c4474;
+}
+
+.navbar-nav .nav-link {
+  margin: 0 10px;
+}
+
+.resume-link {
+  margin-left: 15px;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+
+.nav-link::before {
+  right: 0;
+  top: 0;
+  border-top: 2px solid #37a060;
+  border-right: 2px solid #37a060;
+  transform: translate(-100%, 50%);
+}
+
+.nav-link::after {
+  left: 0;
+  bottom: 0;
+  border-bottom: 2px solid #37a060;
+  border-left: 2px solid #37a060;
+  transform: translate(100%, -50%);
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.nav-link:hover {
+  color: #f77c91;
+}
+/* INTRODUCTION SECTION */
+
+.intro {
+  height: 90vh;
+  margin-top: 50px;
+}
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*background image
+  background-image: url("../images/intro-img-blurred.png");
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  */
+
+.intro-title {
+  position: relative;
+  top: 0;
+  opacity: 0;
+  animation: slideInAndFadeIn 1.2s forwards,
+    moveUpDown 3.8s 2s infinite ease-in-out;
+  width: 800vh;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  z-index: 0;
+  padding-bottom: 20px;
+  background-image: url("../images/ttl_primary.png");
+  background-size: cover;
+}
+
+.title-bg {
+  font-size: 70px;
+  font-weight: 600;
+  color: white;
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+@keyframes slideInAndFadeIn {
+  0% {
+    top: -70px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ABOUT ME SECTION */
+
+.text-box {
+  position: relative;
+  color: white;
+  padding: 1em;
+  margin: 15px;
+  border-radius: 10px;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  border-bottom: 3px solid white;
+}
+/* SKILLS SECTION */
 
 .accordion-button {
   font-size: 1rem;
   font-weight: 500;
+  background-color: #34ac80;
 }
 
 .skill-header {
@@ -34,9 +173,172 @@
   margin: 30px;
 }
 
+/* PROJECT SECTION */
+
 .project-image {
   max-width: 100%;
   height: auto;
   max-height: 150px;
   margin-bottom: 10px;
+}
+
+.card {
+  /*width: 300px;
+  height: 400px;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+.btn img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.btn-text {
+  font-size: 15px;
+}
+/* FOOTER SECTION */
+
+.slide-footer {
+  background-image: url("../images/intro-img-blurred.png");
+  background-position: center;
+  height: 40vh;
+  background-size: cover;
+  margin-top: 50px;
+}
+
+.slide-footer.dark-mode {
+  background-image: url("../images/intro-img-dark-blurred2.png");
+  background-position: center;
+  height: 40vh;
+  background-size: cover;
+  margin-top: 50px;
+}
+
+.footer {
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-family: regularfont;
+  box-sizing: border-box;
+  padding: 30px 30px;
+  background-color: rgb(0, 0, 0);
+}
+
+.footer p {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #fff;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "游ゴシック",
+    "Yu Gothic", "YuGothic", sans-serif;
+}
+
+.social-icons {
+  margin-top: 0px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 20%;
+  overflow: hidden;
+  transition: transform 0.5s;
+  height: 60px;
+  width: 60px;
+}
+
+/* Style for icon wrapper */
+.icon-wrapper {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+
+.icon-wrapper a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Hover effect on icon */
+.icon-wrapper:hover img {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* STYLE // FONTS // AESTHETICS SECTION */
+
+.green-text {
+  color: #389566 !important;
+}
+
+.blue-reflection {
+  font-size: 3rem;
+  color: white;
+  font-family: "Titular", sans-serif;
+  font-weight: 500;
+  width: 100%;
+  -webkit-writing-mode: lr-tb;
+  -ms-writing-mode: lr-tb;
+  writing-mode: lr-tb;
+  margin-top: 25px;
+  left: 0;
+  line-height: 5.5rem;
+  text-shadow: 0 0 3px #17d82f, 0 0 6px #278814;
+}
+
+.blue-reflection2 {
+  font-family: "Agenda", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #37a060;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.blue-reflection3 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 7px 30px 7px 15px;
+  background: #f77c91;
+  color: #fff;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "游ゴシック",
+    "Yu Gothic", "YuGothic", sans-serif;
+
+  letter-spacing: 0;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  background-color: #f77c91;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }

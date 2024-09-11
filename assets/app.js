@@ -61,21 +61,28 @@
     }
   };
 
+  // Dark mode switch (non bootstrap elements)
   const toggleTheme = () => {
     const modeSwitch = document.getElementById("modeSwitch");
     const modeIcon = document.getElementById("modeIcon");
     const modeText = document.getElementById("modeText");
+    const slideFooter = document.querySelector(".slide-footer");
+    const header = document.querySelector(".header-scrolled");
 
     if (modeSwitch.checked) {
       setStoredTheme("dark");
       setTheme("dark");
       modeIcon.classList.replace("bi-sun-fill", "bi-moon-fill");
       modeText.textContent = "Dark";
+      slideFooter.classList.add("dark-mode");
+      header.classList.add("dark-mode");
     } else {
       setStoredTheme("light");
       setTheme("light");
       modeIcon.classList.replace("bi-moon-fill", "bi-sun-fill");
       modeText.textContent = "Light";
+      slideFooter.classList.remove("dark-mode");
+      header.classList.remove("dark-mode");
     }
   };
 
@@ -104,5 +111,15 @@
       modeIcon.classList.replace("bi-sun-fill", "bi-moon-fill");
       modeText.textContent = "Dark";
     }
+
+    // Navbar change from transparent to solid on scroll
+    const navbar = document.querySelector(".header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("header-scrolled");
+      } else if (window.scrollY <= 50) {
+        navbar.classList.remove("header-scrolled");
+      }
+    });
   });
 })();
