@@ -1,3 +1,3 @@
 # kylekhai_portfolio
 
-in the works..
+...pending...
